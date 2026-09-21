@@ -177,66 +177,21 @@ Let's revisit and old CS2 topic, Vectors!
 The following `IntVector` class is a custom C++ vector class for integers only.
 
 ```cpp
-class IntVector {
+template <typename T>
+class Vector {
 
     int max = 3;
-    int * data;
+    T * data;
     int current = 0;
     void resize(); // resizes array when full
     
     public:    
-    IntVector(); // will create our dynamic array.
-    void push_back(int item); // add items to the Vector 
-    int at(int index); // returns a value
+    Vector(); // will create our dynamic array.
+    void push_back(T item); // add items to the Vector 
+    T at(int index); // returns a value
     void pop_back(); // removes last item
     int size(); // returns current size 
 };
-
-void IntVector::resize() {
-    // create a new array
-    max = max * 2;
-    int* temp = new int[max]; // twice the size of data 
-    
-    // copy contents of data into temp 
-    for(int index = 0; index < (max / 2); index++) {
-        temp[index] = data[index];
-    }
-    
-    // make data point to temp (new bigger array)
-    int* temp2 = data;
-    data = temp;
-    // delete the originla array
-    delete[] temp2;
-}
-
-IntVector::IntVector() {
-    data = new int[ max ];
-}
-
-void IntVector::push_back(int item) {
-    if (current >= max) {
-        resize();
-    }
-    data[current] = item;
-    current++;
-}
-
-int IntVector::size() {
-    return current;
-}
-
-int IntVector::at(int index) {
-    if (index > current) {
-        throw invalid_argument("index is out of bounds");
-    }
-    return data[index];
-}
-
-void IntVector::pop_back() {
-    if (current > 0) {
-        current--;
-    }
-}
 ```
 
 Recreate the `IntVector` class in Java.
