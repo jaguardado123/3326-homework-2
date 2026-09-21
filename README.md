@@ -174,7 +174,7 @@ Next, create an `info()` function inside `Student` to print out an individual st
 
 Let's revisit and old CS2 topic, Vectors!
 
-The following `IntVector` class is a custom C++ vector class for integers only.
+The following `Vector` class is a custom C++ vector class for integers only.
 
 ```cpp
 template <typename T>
@@ -194,7 +194,7 @@ class Vector {
 };
 ```
 
-Recreate the `IntVector` class in Java.
+Recreate the `Vector` class in Java.
 
 Make sure to have the following **methods**:
 
@@ -219,7 +219,7 @@ And, the following **attributes** (class variables):
 | Problem 1 Buyer class missing or not packaged | -10 |
 | Problem 2 Student class missing or not packaged | -10 |
 | Problem 2 student_id is not static | -20 |
-| Problem 3 IntVector class is missing or not packaged | -20 |
-| Problem 3 IntVector class methods don't work or have incorrect access modifiers | -30 |
+| Problem 3 Vector class is missing or not packaged | -20 |
+| Problem 3 Vector class methods don't work or have incorrect access modifiers | -30 |
 
 [How to Submit Assignments to GitHub](https://joselitoguardado.dev/3326/How_to_Submit_Assignments_to_GitHub.pdf)
