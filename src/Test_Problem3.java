@@ -6,7 +6,7 @@ public class Test_Problem3 {
 	
 	@Test
 	public void testing_input() {
-		IntVector vect = new IntVector();
+		Vector<Integer> vect = new Vector<>();
         vect.push_back(5);
         vect.push_back(10);
         assertEquals(5, vect.at(0));
@@ -15,7 +15,7 @@ public class Test_Problem3 {
 
 	@Test
 	public void testing_remove() {
-		IntVector vect = new IntVector();
+		Vector<Integer> vect = new Vector<>();
         vect.push_back(5);
         vect.push_back(10);
         assertEquals(2, vect.size());
@@ -25,7 +25,7 @@ public class Test_Problem3 {
 
 	@Test
 	public void testing_resize() {
-		IntVector vect = new IntVector();
+		Vector<Integer> vect = new Vector<>();
         int size = 50;
         for(int i = 0; i < size; i++) {
             vect.push_back(i);
